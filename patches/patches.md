@@ -7,7 +7,6 @@ Patch | Description | Keybindings | Notes | Link
 alpha | --- | --- | --- | --- | 
 attachbelow | --- | --- | --- | --- | 
 autostart | --- | --- | --- | --- | 
-center | --- | --- | --- | --- | 
 combo | --- | --- | --- | --- | 
 cyclelayouts | --- | --- | --- | --- | 
 fakefullscreen | --- | --- | --- | --- | 
@@ -29,7 +28,12 @@ viewontag | --- | --- | --- | --- |
 ## Layouts
 Layout | Description | Link
 --- | --- | --- |
-centeredmaster | --- | ---
-centeredfloatingmaster | --- | ---
+tile | --- | --- |
+floating | --- | --- |
+monocle | --- | --- |
+bottomstack | --- | --- |
+centeredmaster | --- | --- |
+centeredfloatingmaster | --- | --- |
+deck | --- | --- |
 
 ## Configuration
