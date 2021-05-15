@@ -4,7 +4,7 @@
 
 Patch | Description | Keybindings | Notes | Link
 --- | --- | --- | --- | --- | 
-alpha | --- | --- | --- | --- | 
+activetagindicator | --- | --- | --- | --- | 
 attachbelow | --- | --- | --- | --- | 
 autostart | --- | --- | --- | --- | 
 combo | --- | --- | --- | --- | 
@@ -19,9 +19,8 @@ rotatestack | --- | --- | --- | --- |
 scratchpad | --- | --- | --- | --- | 
 selfrestart | --- | --- | --- | --- | 
 sticky | --- | --- | --- | --- | 
-swallow | --- | --- | --- | --- | 
 systray | --- | --- | --- | --- | 
-vanitygaps | --- | --- | --- | --- | 
+ru-gaps | --- | --- | --- | --- | 
 viewontag | --- | --- | --- | --- | 
 
 
