@@ -74,7 +74,6 @@ static const char scratchpadname[] = "scratchpad";
 /* static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL }; */
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120", "34", NULL };
 
-#include "selfrestart.c"
 #include "movestack.c"
 
 static Key keys[] = {
@@ -129,8 +128,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	TAGKEYS(                        XK_0,                      9)
-        { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
-	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("killall xinit") },
+        /* application launcher shortcuts */
+        { MODKEY,                       XK_e,      spawn,          SHCMD("nautilus") },
 };
 
 /* button definitions */
