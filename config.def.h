@@ -130,7 +130,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	TAGKEYS(                        XK_0,                      9)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("killall xinit") },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("sudo service gdm restart") },
         /* application launcher shortcuts */
         { MODKEY,                       XK_e,      spawn,          SHCMD("nautilus") },
 };
