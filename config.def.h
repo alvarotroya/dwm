@@ -80,7 +80,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-        { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_F12,    togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -103,10 +103,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[5]} },
-        { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[6]} },
-        { MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[7]} },
-	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
+  { MODKEY,                       XK_y,      setlayout,      {.v = &layouts[6]} },
+  { MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[7]} },
+	{ MODKEY,		                    XK_bracketleft,  cyclelayout,    {.i = -1 } },
+	{ MODKEY,                       XK_bracketright, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_s,      togglesticky,   {0} },
@@ -130,9 +130,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	TAGKEYS(                        XK_0,                      9)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
+	{ 0,                       XF86XK_AudioRaiseVolume,   spawn,          SHCMD("amixer set Master 5%+") },
+	{ 0,                       XF86XK_AudioLowerVolume,   spawn,          SHCMD("amixer set Master 5%-") },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("sudo service gdm restart") },
         /* application launcher shortcuts */
-        { MODKEY,                       XK_e,      spawn,          SHCMD("nautilus") },
+  { MODKEY,                       XK_e,      spawn,          SHCMD("nautilus") },
 };
 
 /* button definitions */
