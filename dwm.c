@@ -654,7 +654,9 @@ void clientmessage(XEvent *e) {
   } else if (cme->message_type == netatom[NetActiveWindow]) {
     for (i = 0; i < LENGTH(tags) && !((1 << i) & c->tags); i++)
       if (i < LENGTH(tags)) {
-        const Arg a = {.ui = 1 << (i + 1)};
+        const Arg a = {
+            .ui = 1 << (i + 1)}; /* we're adding here +1 as a workaround, it
+                                    won't work for tag 0 */
         selmon = c->mon;
         view(&a);
         focus(c);
